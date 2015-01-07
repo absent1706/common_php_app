@@ -13,7 +13,7 @@ It can:
     "require":
     {
         "litvinenko/app": "*"
-    },
+    }
 }
 ```
 and run
