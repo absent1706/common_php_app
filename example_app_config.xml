@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config> <!-- root element. don't care about it-->
+    <events> <!-- element containing all event info -->
+        <language_learned> <!-- event name. first param for App:dispatchEvent method -->
+            <observers> <!-- all observers for current event -->
+                <logger_observer> <!-- unique observer name -->
+                    <class>Logger</class> <!-- observer class -->
+                    <method>logLearnedLanguage</method> <!-- observer method to be called -->
+                </logger_observer>
+                <learner_observer> <!-- seconde observer -->
+                    <class>Learner</class>
+                    <method>printLearnedLanguages</method>
+                    <singleton>1</singleton> <!-- this param (0 or 1, true or false) tells app that observer object should be obtained with getSingleton method -->
+                </learner_observer>
+            </observers>
+        </language_learned>
+    </events>
+    <developer_mode>0</developer_mode> <!-- this param (0 or 1, true or false) tells app that we are in developer mode-->
+</config>

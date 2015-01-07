@@ -1,0 +1,11 @@
+{
+    "name": "litvinenko/app",
+    "description": "General-purpose Litvinenko\\Common\\App class that can dispatch events in Magento style (see http://www.solvingmagento.com/event-driven-architecture-in-magento-observer-pattern/ or http://codegento.com/2011/04/observers-and-dispatching-events/) and create singletones in Magento style (see http://inchoo.net/magento/making-use-of-magento-getsingleton-method/)",
+    "require": {
+        "php": ">=5.4.0",
+        "litvinenko/object": "*"
+        },
+    "autoload": {
+        "psr-4": {"Litvinenko\\Common\\": "src"}
+    }
+}
