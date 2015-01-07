@@ -206,7 +206,7 @@ class App
      * @param  string $eventName
      * @param  array  $eventData data to be set to event (Event is assumed to be instance of Litvinenko\Common\Object)
      */
-    public function dispatchEvent($eventName, array $eventData)
+    public function dispatchEvent($eventName, array $eventData = array())
     {
        if (isset(self::$events[$eventName]))
        {
