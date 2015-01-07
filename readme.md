@@ -22,7 +22,7 @@ composer install
 ```
 
 ##To init App
-Just run \Litvinenko\Common\App::init() method and pass to it path to your config file (default path is 'app_config.xml'). This will register all events and observers.
+Just run \Litvinenko\Common\App::init() method and pass to it path to your config file (default path is 'config.xml'). This will register all events and observers.
 
 XML config file for this app is very similar to Magento XML config files (see http://www.solvingmagento.com/event-driven-architecture-in-magento-observer-pattern/).
 
@@ -65,7 +65,7 @@ App::dispatchEvent('language_learned', array('language' => $language, 'learner' 
 
 ##Working example:
 
-XML file ('example_app_config.xml')
+XML file ('example_config.xml')
 ```xml
 <?xml version="1.0"?>
 <config> <!-- root element. don't care about it-->
@@ -152,7 +152,7 @@ class Logger
 try
 {
     // init app with custom config file
-    App::init('example_app_config.xml');
+    App::init('example_config.xml');
 
     // creating new learner with ukrainian native language
     $learner = App::getSingleton('Learner', ['ukrainian']);

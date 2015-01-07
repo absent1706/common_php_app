@@ -9,7 +9,7 @@ namespace Litvinenko\Common;
  *  This class uses Magento-like XML config files (see http://www.solvingmagento.com/event-driven-architecture-in-magento-observer-pattern/).
  *
  *  --------------------------- To init App: ---------------------
- * Just run \Litvinenko\Common\App::init() method and pass to it path to your config file (default path is 'app_config.xml'). This will register all events and observers
+ * Just run \Litvinenko\Common\App::init() method and pass to it path to your config file (default path is 'config.xml'). This will register all events and observers
  * XML config file for this app is very similar to Magento XML config files (see http://www.solvingmagento.com/event-driven-architecture-in-magento-observer-pattern/).
  * It should look like:
  *
@@ -81,7 +81,7 @@ class App
      *
      * @param type $configFile string
      */
-    public static function init($configFile = 'app_config.xml')
+    public static function init($configFile = 'config.xml')
     {
         self::$configFile = $configFile;
         if (file_exists(self::$configFile))
