@@ -9,27 +9,25 @@ It can:
 ##Installation
  Just install it throw composer. Create composer.json file in your app directory, fill it with
 ```json
+{
+    "require":
     {
-        "require":
-        {
-            "litvinenko/app": "*"
-        },
-    }
+        "litvinenko/app": "*"
+    },
+}
 ```
 and run
 ```
-    composer install
+composer install
 ```
 
 ##To init App
-Just run
-    \Litvinenko\Common\App::init()
-method and pass to it path to your config file (default path is 'app_config.xml'). This will register all events and observers.
+Just run \Litvinenko\Common\App::init() method and pass to it path to your config file (default path is 'app_config.xml'). This will register all events and observers.
 
 XML config file for this app is very similar to Magento XML config files (see http://www.solvingmagento.com/event-driven-architecture-in-magento-observer-pattern/).
 
 It should look like:
- ```xml
+```xml
 <?xml version="1.0"?>
 <config> <!-- root element. don't care about it-->
     <events> <!-- (optional) element containing all event info -->
@@ -49,21 +47,21 @@ It should look like:
     </events>
     <developer_mode>0</developer_mode> <!-- (optional) this param (0 or 1, true or false) tells app that we are in developer mode-->
 </config>
- ```
+```
 
 ##To dispatch events using App:
  firstly, init app:
- ```php
+```php
 \Litvinenko\Common\App::init()
  ```
  then, in any place you need paste:
- ```php
+```php
 App::dispatchEvent('event_name', array('param1' => $value1, 'param2' => $value2, ...));
 ```
  For example,
- ```php
+```php
 App::dispatchEvent('language_learned', array('language' => $language, 'learner' => $this));
- ```
+```
 
 ##Working example:
 
