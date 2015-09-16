@@ -83,6 +83,8 @@ class App
      */
     public static function init($configFile = 'config.xml')
     {
+        self::$singletons = [];
+        self::$events = [];
         self::$configFile = $configFile;
         if (file_exists(self::$configFile))
         {
