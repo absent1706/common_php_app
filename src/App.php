@@ -77,6 +77,14 @@ class App
     protected static $singletons;
 
     /**
+     * Forces app to recreate singletons on next getSingleton method call
+     */
+    public static function resetSingletons()
+    {
+        self::$singletons = [];
+    }
+
+    /**
      * Initializes app: reads config from config file
      *
      * @param type $configFile string
